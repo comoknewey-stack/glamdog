@@ -8,12 +8,21 @@
 <meta name="theme-color" content="#6C7863">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with the real Measurement ID from analytics.google.com before deploying -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-XXXXXXXXXX");
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap">
 
 <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20260902-6">
+<link rel="stylesheet" href="styles.css?v=20260902-12">
 </head>
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -28,11 +37,15 @@
     <a class="nav-logo" href="#top"><img src="assets/img/logo.webp" alt="GlamDog Salón Canino" width="150" height="150"></a>
     <nav class="nav-links" aria-label="Principal">
       <a class="nav-link" href="#top">Inicio</a>
+      <a class="nav-link" href="#sobre">Sobre nosotros</a>
       <a class="nav-link" href="#servicios">Servicios</a>
+      <a class="nav-link" href="#por-que-glamdog">Por qué</a>
+      <a class="nav-link" href="#trabajos">Trabajos</a>
       <a class="nav-link" href="#contacto">Contacto</a>
       <a class="nav-link" href="#horario">Horario</a>
     </nav>
     <div class="nav-actions">
+      <a class="nav-phone" data-phone href="tel:+34624075112" aria-label="Llamar a GlamDog">📞</a>
       <a class="btn btn-primary" data-whatsapp href="https://wa.me/34624075112" target="_blank" rel="noopener">Pedir cita</a>
       <button class="nav-burger" data-burger aria-label="Abrir menú" aria-haspopup="true">
         <span></span>
@@ -45,7 +58,10 @@
   <button class="nav-mobile-close" data-mobile-close aria-label="Cerrar menú">✕</button>
   <nav class="nav-mobile-links" aria-label="Menú móvil">
     <a href="#top">Inicio</a>
+    <a href="#sobre">Sobre nosotros</a>
     <a href="#servicios">Servicios</a>
+    <a href="#por-que-glamdog">Por qué GlamDog</a>
+    <a href="#trabajos">Trabajos</a>
     <a href="#contacto">Contacto</a>
     <a href="#horario">Horario</a>
   </nav>
@@ -95,7 +111,7 @@
 
   <section class="section" id="sobre">
     <div class="container about-grid">
-      <p class="section-num">01 — Sobre nosotros</p>
+      <p class="section-num">Sobre nosotros</p>
       <div class="about-text">
         <h2>Cuidado canino con criterio veterinario.</h2>
         <p>GlamDog es un salón canino en el centro de Oviedo. Al frente está Tati, auxiliar veterinaria, así que cada sesión se piensa también desde la salud de la piel y el pelo, no solo desde la estética.</p>
@@ -111,7 +127,7 @@
   <section class="section section--alt" id="servicios">
     <div class="container">
       <div class="section-head">
-        <p class="section-num">02 — Servicios</p>
+        <p class="section-num">Servicios</p>
         <h2>Cada tratamiento, a la medida de tu perro.</h2>
         <p>Precios orientativos — el importe final depende del tamaño, la raza y el estado del pelaje. Te lo confirmamos sin compromiso antes de la cita.</p>
       </div>
@@ -156,10 +172,10 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="por-que-glamdog">
     <div class="container">
       <div class="section-head">
-        <p class="section-num">03 — Por qué GlamDog</p>
+        <p class="section-num">Por qué GlamDog</p>
         <h2>Tres cosas que notarás desde la primera cita.</h2>
       </div>
       <div class="why-grid">
@@ -182,11 +198,42 @@
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section" id="resenas">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-num">Reseñas</p>
+        <h2>Lo que dicen en Google.</h2>
+        <div class="rating-badge">
+          <span class="rating-stars" aria-hidden="true">★★★★★</span>
+          <span>5.0 de valoración, reseñas verificadas en Google</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=GLAMDOG+Sal%C3%B3n+canino+Oviedo" target="_blank" rel="noopener">Ver todas →</a>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <blockquote class="review-card" data-reveal>
+          <span class="review-stars" aria-hidden="true">★★★★★</span>
+          <p>Es el mejor sitio de peluquería canina de Oviedo sin duda. El servicio es impecable y no puedo estar más contenta con Taty, que es puro amor.</p>
+          <cite>Bubu Bubu</cite>
+        </blockquote>
+        <blockquote class="review-card" data-reveal>
+          <span class="review-stars" aria-hidden="true">★★★★★</span>
+          <p>Mi perra es muy nerviosa y Tatiana tiene una empatía increíble con los animales. No reconocía a mi perra de lo tranquila que estaba — un 10 de 10.</p>
+          <cite>Diana Echeverri Gómez</cite>
+        </blockquote>
+        <blockquote class="review-card" data-reveal>
+          <span class="review-stars" aria-hidden="true">★★★★★</span>
+          <p>Estoy encantada con el trato, profesional y muy atenta. Mi perrito Iker sale muy contento, y el salón siempre huele muy bien — se nota la limpieza.</p>
+          <cite>Maria Teresa Chamorro</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="trabajos">
     <div class="container">
       <div class="insta-head">
-        <p class="section-num" style="margin:0">04 — Instagram</p>
-        <a data-instagram-link href="https://www.instagram.com/glamdog_tati/" target="_blank" rel="noopener">Síguenos en @glamdog_tati →</a>
+        <p class="section-num" style="margin:0">Trabajos</p>
+        <a data-instagram-link href="https://www.instagram.com/glamdog_tati/" target="_blank" rel="noopener">Ver más en Instagram →</a>
       </div>
       <div class="insta-grid">
         <a class="insta-item" href="https://www.instagram.com/glamdog_tati/" target="_blank" rel="noopener" data-reveal>
@@ -208,7 +255,7 @@
   <section class="section" id="contacto">
     <div class="container contact-grid">
       <div class="contact-info">
-        <p class="section-num">05 — Contacto</p>
+        <p class="section-num">Contacto</p>
         <h2>Reserva tu cita en GlamDog.</h2>
         <ul class="contact-list">
           <li class="contact-row">
@@ -257,6 +304,7 @@
       <div>
         <p class="footer-brand">GlamDog</p>
         <p class="footer-brand-sub">Salón canino en Oviedo. Baño, corte y estilismo con mirada veterinaria para perros de cualquier raza.</p>
+        <a class="btn btn-primary footer-cta" data-whatsapp href="https://wa.me/34624075112" target="_blank" rel="noopener">Pedir cita por WhatsApp</a>
       </div>
       <div class="footer-col">
         <h4>Navegación</h4>
@@ -286,6 +334,6 @@
 <script defer src="lib/gsap.min.js"></script>
 <script defer src="lib/ScrollTrigger.min.js"></script>
 <script defer src="lib/manifest.js"></script>
-<script defer src="main.js?v=20260902-6"></script>
+<script defer src="main.js?v=20260902-7"></script>
 </body>
 </html>

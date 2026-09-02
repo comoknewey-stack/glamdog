@@ -1,0 +1,30 @@
+CÓMO CAMBIAR LAS FOTOS DE LA WEB POR FOTOS REALES
+==================================================
+
+Cuando tengas fotos reales del salón, de Tati trabajando o de perros ya
+peinados, sigue estos pasos. No hace falta tocar nada de código.
+
+1. Guarda tus fotos (vale JPG o PNG, directo del móvil) en esta carpeta:
+   assets/photos/source/
+
+2. Ponles EXACTAMENTE uno de estos nombres, según lo que muestren:
+
+   hero.jpg               -> la foto grande de portada (arriba de todo)
+   about-manifesto.jpg    -> la foto de la sección "Sobre nosotros"
+   service-bano.jpg       -> foto del servicio de Baño
+   service-corte.jpg      -> foto del servicio de Corte y estilismo
+   service-deslanado.jpg  -> foto del servicio de Deslanado
+   service-unas.jpg       -> foto del servicio de Uñas y oídos
+   thumb-ig-1.jpg         -> 1ª miniatura de la tira "Instagram"
+   thumb-ig-2.jpg         -> 2ª miniatura
+   thumb-ig-3.jpg         -> 3ª miniatura
+   thumb-ig-4.jpg         -> 4ª miniatura
+   logo.jpg               -> el logo de la cabecera (si tiene fondo
+                              transparente, mejor guárdalo como .png)
+
+3. Dile a Claude: "he metido fotos nuevas en assets/photos/source,
+   conviértelas" — se encarga de optimizarlas y ponerlas en la web.
+
+No pasa nada si solo cambias una o dos: el resto se queda como está.
+Las fotos actuales son de stock (con licencia libre, créditos en
+creditos.html) mientras no haya fotos reales del salón.

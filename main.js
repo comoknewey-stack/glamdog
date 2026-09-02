@@ -20,6 +20,22 @@
     if (year) year.textContent = new Date().getFullYear();
   }
 
+  /* ---------- Contact click tracking (GA4, if present) ---------- */
+
+  function initContactTracking() {
+    if (typeof window.gtag !== "function") return;
+    function track(selector, method) {
+      $$(selector).forEach(function (el) {
+        el.addEventListener("click", function () {
+          window.gtag("event", "contact_click", { method: method });
+        });
+      });
+    }
+    track("[data-whatsapp]", "whatsapp");
+    track("[data-phone]", "phone");
+    track("[data-instagram-link]", "instagram");
+  }
+
   /* ---------- Nav (scroll state + mobile menu) ---------- */
 
   function initNav() {
@@ -213,6 +229,7 @@
     safe(initCursor, "initCursor");
     safe(initTilt, "initTilt");
     safe(initMagnetic, "initMagnetic");
+    safe(initContactTracking, "initContactTracking");
 
     document.documentElement.classList.add("is-ready");
   }
